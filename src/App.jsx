@@ -1,12 +1,18 @@
+import { Route,Routes } from "react-router-dom";
 import "./App.css";
-import TextInputFormContainer from "./components/TextInputForm/TextInputFormContainer";
+import PlayGame from "./pages/PlayGame";
+import StartGame from "./pages/startGame";
 function App() {
   return (
     <>
       <div>
         {/* key = value is accesible through props object */}
-         <TextInputFormContainer/>
-      </div>
+        <Routes>
+          <Route path='/start' element={<StartGame/>}/>
+          <Route path='/play' element={<PlayGame/>}/>
+        </Routes>
+         {/* <TextInputFormContainer/> */}
+      </div> 
     </>
   );
 }
