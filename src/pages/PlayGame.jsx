@@ -7,11 +7,13 @@ function PlayGame() {
   // const {text} = useParams();
   const { state } = useLocation();
   console.log("Location state:", location.state);
+
+  const arr = ['hello','world'];
   return (
     <>
       <h1>Play Game {state.wordSelected}</h1>
-
-      <MaskedText text={state.wordSelected} guessedLetters={["H", "E"]} />
+      {arr.map((element,idx) => <b key={idx}>{element}</b>)}
+      <MaskedText text={state.wordSelected} guessedLetters={[]} />
 
       <Link to={"/start"} className="text-blue-400">
         Start Game Link

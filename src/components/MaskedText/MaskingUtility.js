@@ -14,14 +14,16 @@ export function getMaskedString(originalWord, guessedLetters) {
 
   const guessedLetterSet = new Set(guessedLetters);
 
-  const result = originalWord.toUpperCase().split('')  //Returns an array with all characters in capital letters
-  .map(char => {
-    if(guessedLetterSet.has(char)){
+  const result = originalWord
+    .toUpperCase()
+    .split("") //Returns an array with all characters in capital letters
+    .map((char) => {
+      if (guessedLetterSet.has(char)) {
         return char;
-    }else {
+      } else {
         return "_";
-    }
-  }); 
+      }
+    });
 
-  return result.join('');
+  return result;
 }
