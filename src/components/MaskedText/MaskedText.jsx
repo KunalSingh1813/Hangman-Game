@@ -1,6 +1,8 @@
 import { getMaskedString } from "./MaskingUtility";
 
 function MaskedText({ text, guessedLetters }) {
+  console.log("text:",text);
+  console.log("guessedLetters:"+guessedLetters);
   const maskedString = getMaskedString(text, guessedLetters);
   return (
     <>
